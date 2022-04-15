@@ -36,12 +36,10 @@ def print_cards(cards, hidden):
     print(s)    
     print()
  
- 
 # Function for a single game of blackjack
 def blackjack_game(deck):
     player_cards = []
     dealer_cards = []
- 
     player_score = 0
     dealer_score = 0
     clear()
@@ -97,7 +95,7 @@ def blackjack_game(deck):
         input()
  
     # Player gets a blackjack   
-    if player_score == 21 and player_card[0]+player_card[1]==21:
+    if player_score == 21:
         print("PLAYER HAS A BLACKJACK!!!!")
         print("PLAYER WINS!!!!")
         quit()
@@ -178,7 +176,7 @@ def blackjack_game(deck):
     print("DEALER SCORE = ", dealer_score)
  
     # Check if player has a Blackjack
-    if player_score == 21 and player_card[0]+player_card[1]==21:
+    if player_score == 21:
         print("PLAYER HAS A BLACKJACK")
         quit()
  
@@ -226,24 +224,21 @@ def blackjack_game(deck):
  
         input()
  
+ 
     # Dealer busts
     if dealer_score > 21:        
         print("DEALER BUSTED!!! YOU WIN!!!") 
         quit()  
- 
     # Dealer gets a blackjack
-    if dealer_score == 21 and dealer_card[0]+dealer_card[1]==21:
+    if dealer_score == 21:
         print("DEALER HAS A BLACKJACK!!! PLAYER LOSES")
         quit()
- 
     # TIE Game
     if dealer_score == player_score:
         print("TIE GAME!!!!")
- 
     # Player Wins
     elif player_score > dealer_score:
         print("PLAYER WINS!!!")                 
- 
     # Dealer Wins
     else:
         print("DEALER WINS!!!")                 
