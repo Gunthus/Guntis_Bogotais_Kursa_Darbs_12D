@@ -1,5 +1,8 @@
 import turtle
 import winsound
+import random
+
+RandColors = ["blue","red","cyan","magenta","yellow","black","white"]
 
 # Window properties
 win = turtle.Screen()
@@ -8,28 +11,9 @@ win.bgcolor('green')
 win.setup(width=800,height=600)
 win.tracer(0)
 
-def drawField():
-	draw = turtle.Turtle()
-	draw.penup()
-	draw.speed(0)
-	draw.color('white')
-	draw.hideturtle()
-	draw.goto(-390,295)
-	draw.pendown()
-	for i in range(2):
-		draw.forward(770)
-		draw.right(90)
-		draw.forward(580)
-		draw.right(90)
-	draw.goto(0,295)
-	draw.right(90)
-	draw.goto(0,-285)
-	draw.penup()
-	draw.goto(-50,0)
-	draw.pendown()
-	draw.circle(50)
 
-drawField()
+import Drawer
+Drawer.drawField()
 
 # Scores
 scoreA = 0
@@ -40,7 +24,7 @@ padA = turtle.Turtle()
 padA.speed(0)
 padA.shape('square')
 padA.shapesize(stretch_wid=6,stretch_len=1)
-padA.color('white')
+padA.color(random.choice(RandColors))
 padA.penup()
 padA.goto(-350,0)
 
@@ -49,7 +33,7 @@ padB = turtle.Turtle()
 padB.speed(0)
 padB.shape('square')
 padB.shapesize(stretch_wid=6,stretch_len=1)
-padB.color('white')
+padB.color(random.choice(RandColors))
 padB.penup()
 padB.goto(350,0)
 
@@ -57,7 +41,7 @@ padB.goto(350,0)
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape('circle')
-ball.color('white')
+ball.color(random.choice(RandColors))
 ball.penup()
 ball.goto(0,0)
 
@@ -133,11 +117,11 @@ try:
 		# Border collison
 		if ball.ycor() > 290:
 			ball.dy *= -1
-			playMusic('assets/hit1.wav')#to be added
+			playMusic('assets/hit1.wav')
 
 		if ball.ycor() < -290:
 			ball.dy *= -1
-			playMusic('assets/hit1.wav')#to be added
+			playMusic('assets/hit1.wav')
 
 		if ball.xcor() > 390:
 			ball.setx(-100)
@@ -155,11 +139,11 @@ try:
 
 		# Paddle and ball collision
 		if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < padB.ycor() + 50 and ball.ycor() > padB.ycor() - 50):
-			playMusic('assets/hit2.wav') #to be added
+			playMusic('assets/hit2.wav')
 			ball.setx(340)
 			ball.dx *= -1
 		if (ball.xcor() < -340 and ball.xcor() >-350) and (ball.ycor() < padA.ycor() + 50 and ball.ycor() > padA.ycor() - 50):
-			playMusic('assets/hit2.wav') #to be added
+			playMusic('assets/hit2.wav')
 			ball.setx(-340)
 			ball.dx *= -1
 

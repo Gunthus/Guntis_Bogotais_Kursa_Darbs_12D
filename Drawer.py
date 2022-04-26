@@ -1,0 +1,21 @@
+import turtle
+def drawField():
+	draw = turtle.Turtle()
+	draw.penup()
+	draw.speed(0)
+	draw.color('white')
+	draw.hideturtle()
+	draw.goto(-390,295)
+	draw.pendown()
+	for i in range(2):
+		draw.forward(770)
+		draw.right(90)
+		draw.forward(580)
+		draw.right(90)
+	draw.goto(0,295)
+	draw.right(90)
+	draw.goto(0,-285)
+	draw.penup()
+	draw.goto(-50,0)
+	draw.pendown()
+	draw.circle(50)
