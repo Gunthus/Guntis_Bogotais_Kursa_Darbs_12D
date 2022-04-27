@@ -1,8 +1,21 @@
+from tracemalloc import stop
 import turtle
 import winsound
 import random
-
 RandColors = ["blue","red","cyan","magenta","yellow","black","white"]
+
+# Name input
+import Error_Corection
+Error_Corection.name_checker()
+
+# file opening and closing
+f = open('name1.txt','r')
+name1=f.read()
+f.close
+f = open('name2.txt','r')
+name2=f.read()
+f.close
+
 
 # Window properties
 win = turtle.Screen()
@@ -82,7 +95,7 @@ def padB_down():
 
 
 def write():
-	pen.write(f"Player A : {scoreA}    Player B : {scoreB}",align='center',font=('Courier',24,'normal'))
+	pen.write(f"{name1} : {scoreA}    {name2} : {scoreB}",align='center',font=('Courier',24,'normal'))
 
 
 def playMusic(music):
@@ -109,7 +122,6 @@ write()
 try:
 	while True:
 		win.update()
-
 		# Moving the ball
 		ball.setx(ball.xcor() + ball.dx)
 		ball.sety(ball.ycor() + ball.dy)
@@ -146,6 +158,13 @@ try:
 			playMusic('assets/hit2.wav')
 			ball.setx(-340)
 			ball.dx *= -1
+		# exports last player score to Last_score.txt
+		f = open("Last_score.txt","w")
+		f.write("Last player score is "+str(name1)+": "+str(scoreA)+"   -   "+str(name2)+": "+str(scoreB))
+		f.close()
+			
+
+
 
 
 except Exception as e:
