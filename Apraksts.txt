@@ -1,0 +1,9 @@
+pildītā uzdevuma mērķis: Izveidot pēlejamu versiju Ponga ar grafisku interfeisu, kurā tiek skaitīts rezultāts
+
+programmas daļu funkcionalitāte: Caur visu kodu ir paskaidrojumi kas notiek. Ir daļas koda kuras uzīmē laukumu un objekts ar turtle palīdzību. Pārējas daļas kalpo rezultātu
+saskaitīšanā kā arī vārdu ievadīšanā
+
+mainīgo un to datu tipu lietojums : izmantoti vairāki mainīgo tipi str,int,bool un viņi izpilda savus uzdevumus
+
+ievaddati : Ievada no failiem name1.txt name2.txt cilvēku izvēlētos vārdus.
+izvaddati : Izvada pēdējo rezultāta + Vārdus failā Last_score.txt
