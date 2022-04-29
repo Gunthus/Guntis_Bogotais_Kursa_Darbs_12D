@@ -3,6 +3,9 @@ import turtle
 import winsound
 import random
 RandColors = ["blue","red","cyan","magenta","yellow","black","white"]
+# Welcome message
+import welcomemsg
+welcomemsg.DDarray()
 
 # Name input
 import Error_Corection
@@ -161,7 +164,7 @@ try:
 		# exports last player score to Last_score.txt
 		f = open("Last_score.txt","w")
 		f.write("Last player score is "+str(name1)+": "+str(scoreA)+"   -   "+str(name2)+": "+str(scoreB))
-		f.close()
+		f.close()	
 			
 
 

@@ -1,1 +1,1 @@
-Last player score is Player1: 4   -   Player2: 2
+Last player score is Player1: 3   -   Player2: 8
