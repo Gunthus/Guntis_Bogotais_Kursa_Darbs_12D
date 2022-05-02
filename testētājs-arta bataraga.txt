@@ -1,2 +1,4 @@
 Nav izmantota random skaitļa ģenerēšana, bet tā ir japielito, jo tas ir prasībās.
 es domāju ka to varētu pielietot bumbas sākuma ātrumam
+
+#Izpildīts -raksta Guntis

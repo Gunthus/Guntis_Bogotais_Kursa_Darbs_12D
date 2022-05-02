@@ -61,8 +61,10 @@ ball.color(random.choice(RandColors))
 ball.penup()
 ball.goto(0,0)
 
-ball.dx = 0.3
-ball.dy = 0.3
+# choses starting speed by generating a random nummber and * by 0.1
+ball.dx = random.randrange(3, 8)*0.1
+ball.dy = random.randrange(3, 8)*0.1
+
 
 
 #pen
