@@ -56,7 +56,7 @@ padB.goto(350,0)
 # Ball
 ball = turtle.Turtle()
 ball.speed(0)
-ball.shape('circle')
+ball.shape('square')
 ball.color(random.choice(RandColors))
 ball.penup()
 ball.goto(0,0)
@@ -80,22 +80,22 @@ pen.goto(0,250)
 # Functions :
 def padA_up():
 	y = padA.ycor()
-	y += 25
+	y += 40
 	padA.sety(y)
 
 def padA_down():
 	y = padA.ycor()
-	y -= 25
+	y -= 40
 	padA.sety(y)
 
 def padB_up():
 	y = padB.ycor()
-	y += 25
+	y += 40
 	padB.sety(y)
 
 def padB_down():
 	y = padB.ycor()
-	y -= 25
+	y -= 40
 	padB.sety(y)
 
 
